@@ -4,10 +4,14 @@ set background=dark
 " Setting leader to space
 let mapleader=" "
 
-colorscheme gruvbox
+colo tender
 
 set number
+set ruler
 set wildmenu
+
+" for spell checking
+set spell spelllang=en_us
 
 " making indent two
     
@@ -55,14 +59,15 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'easymotion/vim-easymotion'
 Plugin 'SirVer/ultisnips'
+Plugin 'jacoborus/tender.vim'
 
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 
 " All of your Plugins must be added before the following line
 call vundle#end()           
-filetype plugin indent on    
+filetype plugin indent on
