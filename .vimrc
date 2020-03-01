@@ -1,11 +1,12 @@
-syntax on
-set background=dark
-
-" Setting leader to space
+" setting leader to space
 let mapleader=" "
 
-colo tender
-
+" colors
+syntax on
+set background=dark
+let g:gruvbox_undercurl=0 " disable underlines
+colorscheme gruvbox
+ 
 set number
 set ruler
 set wildmenu
@@ -14,7 +15,6 @@ set wildmenu
 set spell spelllang=en_us
 
 " making indent two
-    
 set shiftwidth=2 " indenting with > or <
 set tabstop=2 " number of spaces that a tab counts for
 set expandtab " tabs act as spaces
@@ -60,7 +60,6 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'SirVer/ultisnips'
-Plugin 'jacoborus/tender.vim'
 
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<tab>"
