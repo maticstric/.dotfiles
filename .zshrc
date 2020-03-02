@@ -3,6 +3,8 @@ PROMPT='%F{yellow}%~ $%f '
 # set vi-mode
 set -o vi
 
+alias ls="ls -Gh"
+
 # personal scripts
 export PATH=$PATH:$HOME/bin
 
