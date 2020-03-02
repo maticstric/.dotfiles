@@ -1,5 +1,4 @@
-PROMPT='%F{yellow}%~ $%f '                                                                  
-alias ls='ls -Gh'  
+PROMPT='%F{yellow}%~ $%f '
 
 # set vi-mode
 set -o vi
