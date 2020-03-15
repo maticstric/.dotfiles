@@ -7,12 +7,12 @@ set background=dark
 let g:gruvbox_undercurl=0 " disable underlines
 colorscheme gruvbox
  
+" line numbers
 set number
+set relativenumber
+
 set ruler
 set wildmenu
-
-" for spell checking
-set spell spelllang=en_us
 
 " making indent two
 set shiftwidth=2 " indenting with > or <
@@ -22,8 +22,8 @@ set expandtab " tabs act as spaces
 set colorcolumn=72
 
 " move between tabs (multiple files)
-noremap <F7> :tabp <CR>
-noremap <F8> :tabn <CR>
+nnoremap <F7> :tabp <CR>
+nnoremap <F8> :tabn <CR>
 
 " searching
 set incsearch " search as characters are entered
@@ -44,9 +44,6 @@ nnoremap _ ddkP
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :so $MYVIMRC<cr>
 
-" my common misspellings
-iabbrev lenght length
-
 " Vundle
 set nocompatible              " be iMproved, required
 filetype off   
@@ -61,6 +58,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'morhetz/gruvbox'
 
+" UltiSnips settings
 let g:UltiSnipsEditSplit="vertical"
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
