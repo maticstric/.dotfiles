@@ -44,6 +44,9 @@ nnoremap _ ddkP
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :so $MYVIMRC<cr>
 
+" StandardEbooks folder uses tabs, not spaces
+autocmd BufRead,BufNewFile ~/Projects/StandardEbooks/* setlocal noexpandtab
+
 " Vundle
 set nocompatible              " be iMproved, required
 filetype off   
