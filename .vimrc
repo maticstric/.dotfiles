@@ -19,7 +19,7 @@ set shiftwidth=2 " indenting with > or <
 set tabstop=2 " number of spaces that a tab counts for
 set expandtab " tabs act as spaces
 
-set colorcolumn=72
+set colorcolumn=80
 
 " move between tabs (multiple files)
 nnoremap <F7> :tabp <CR>
@@ -44,8 +44,9 @@ nnoremap _ ddkP
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :so $MYVIMRC<cr>
 
-" StandardEbooks folder uses tabs, not spaces
+" StandardEbooks and Books folder uses tabs, not spaces
 autocmd BufRead,BufNewFile ~/Projects/StandardEbooks/* setlocal noexpandtab
+autocmd BufRead,BufNewFile ~/Projects/Books/* setlocal noexpandtab
 
 " Vundle
 set nocompatible              " be iMproved, required
