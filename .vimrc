@@ -6,6 +6,9 @@ syntax on
 set background=dark
 let g:gruvbox_undercurl=0 " disable underlines
 colorscheme gruvbox
+
+" easier typing of diacritics
+set digraph
  
 " line numbers
 set number
