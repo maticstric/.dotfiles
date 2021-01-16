@@ -9,6 +9,9 @@ colorscheme gruvbox
 
 " easier typing of diacritics
 set digraph
+nnoremap <leader>' s<c-r>"<bs>'<esc>
+nnoremap <leader>` s<c-r>"<bs>`<esc>
+nnoremap <leader>^ s<c-r>"<bs>^<esc>
  
 " line numbers
 set number
