@@ -28,15 +28,15 @@ set expandtab " tabs act as spaces
 set colorcolumn=80
 
 " move between tabs (multiple files)
-nnoremap <F7> :tabp <CR>
-nnoremap <F8> :tabn <CR>
+nnoremap <F7> :tabp <cr>
+nnoremap <F8> :tabn <cr>
 
 " searching
 set incsearch " search as characters are entered
 set hlsearch " highlight matches 
 
 " stops highlighting the searches
-nnoremap <leader>n :nohlsearch<CR>
+nnoremap <leader>n :nohlsearch<cr>
 
 " moves vertically by 1 line even if it wraps around
 nnoremap j gj
