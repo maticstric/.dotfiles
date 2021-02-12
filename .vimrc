@@ -1,11 +1,23 @@
 " setting leader to space
 let mapleader=" "
 
+" allow backspace to be used
+set backspace=2
+
 " colors
 syntax on
 set background=dark
 let g:gruvbox_undercurl=0 " disable underlines
 colorscheme gruvbox
+
+" since vim sucks with certain unicode characters, replace them
+set conceallevel=2
+set concealcursor=niv
+
+syntax match Conceal /\%u2060/ conceal cchar=ϝ
+syntax match Conceal /\%u200A/ conceal cchar=η
+syntax match Conceal /\%u00A0/ conceal cchar=ν
+syntax match Conceal /\%u2E3A/ conceal cchar=δ
 
 " easier typing of diacritics
 set digraph
