@@ -20,11 +20,11 @@ syntax match Conceal /\%u00A0/ conceal cchar=ν
 syntax match Conceal /\%u2E3A/ conceal cchar=δ
 
 " easier typing of diacritics
-set digraph
-nnoremap <leader>' s<c-r>"<bs>'<esc>
-nnoremap <leader>` s<c-r>"<bs>`<esc>
-nnoremap <leader>^ s<c-r>"<bs>^<esc>
- 
+" set digraph
+" nnoremap <leader>' s<c-r>"<bs>'<esc>
+" nnoremap <leader>` s<c-r>"<bs>`<esc>
+" nnoremap <leader>^ s<c-r>"<bs>^<esc>
+
 " line numbers
 set number
 set relativenumber
@@ -45,7 +45,7 @@ nnoremap <F8> :tabn <cr>
 
 " searching
 set incsearch " search as characters are entered
-set hlsearch " highlight matches 
+set hlsearch " highlight matches
 
 " stops highlighting the searches
 nnoremap <leader>n :nohlsearch<cr>
@@ -58,6 +58,8 @@ nnoremap k gk
 nnoremap - ddp
 nnoremap _ ddkP
 
+command TW %s/\s\+$//e
+
 " opening and sourcing my vimrc file with a shortcut
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :so $MYVIMRC<cr>
@@ -65,10 +67,11 @@ nnoremap <leader>sv :so $MYVIMRC<cr>
 " StandardEbooks and Books folder uses tabs, not spaces
 autocmd BufRead,BufNewFile ~/Projects/StandardEbooks/* setlocal noexpandtab
 autocmd BufRead,BufNewFile ~/Projects/Books/* setlocal noexpandtab
+autocmd BufRead,BufNewFile ~/Projects/lafferty/* setlocal noexpandtab
 
 " Vundle
 set nocompatible              " be iMproved, required
-filetype off   
+filetype off
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -88,5 +91,5 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 
 " All of your Plugins must be added before the following line
-call vundle#end()           
+call vundle#end()
 filetype plugin indent on
