@@ -16,9 +16,15 @@ alias ls="ls -Gh"
 # personal scripts
 export PATH=$PATH:$HOME/bin
 
-# Created by `userpath` on 2020-02-12 03:57:33
-# For StandardEbooks
-export PATH=$PATH:/Users/matic/.local/bin
+# nvim
+export PATH=$PATH:$HOME/bin/nvim-macos/bin/
+
+# Created for ReactNative
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 function get_git_branch() {
   git branch 
